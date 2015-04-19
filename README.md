@@ -15,5 +15,5 @@ Tested with Haxe 3.1.3
 # Running
 
 ```
-  lime test neko
+  lime test cpp
 ```
