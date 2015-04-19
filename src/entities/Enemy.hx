@@ -26,14 +26,15 @@ class Enemy extends Entity
 
   public override function update()
   {
-    if (this.x < -100)
+    if (x < -500)
     {
       scene.remove(this);
-      return;
     }
-
-    moveBy(-5, 0, "player");
-    super.update();
+    else
+    {
+      moveBy(-5, 0, "player");
+      super.update();
+    }
   }
 
 }

@@ -61,12 +61,25 @@ class GameScene extends Scene
       spawn();
       spawn();
       spawn();
+
+      if (points > 100)
+      {
+        spawn();
+        spawn();
+      }
+
     }
 
     if (spawnPointTimer <= 0)
     {
       spawnPoint();
       spawnPoint();
+
+      if (points > 100)
+      {
+        spawnPoint();
+      }
+
     }
 
     super.update();

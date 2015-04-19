@@ -28,8 +28,15 @@ class Point extends Entity
 
   public override function update()
   {
-    moveBy(-5, 0, "player");
-    super.update();
+    if (x < -500)
+    {
+      scene.remove(this);
+    }
+    else
+    {
+      moveBy(-5, 0, "player");
+      super.update();
+    }
   }
 
 }

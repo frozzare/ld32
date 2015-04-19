@@ -2,14 +2,15 @@ package entities;
 
 import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
+import com.haxepunk.HXP;
 
 class Bullet extends Entity
 {
     public function new(x:Float, y:Float)
     {
         super(x, y);
-        graphic = Image.createCircle(2);
-        setHitbox(2, 2);
+        graphic = new Image("graphics/ghost.png");
+        setHitbox(10, 10);
         type = "bullet";
     }
 
@@ -22,8 +23,15 @@ class Bullet extends Entity
 
     public override function update()
     {
-        moveBy(15, 0, "enemy");
-        super.update();
+        if (x > HXP.width)
+        {
+          scene.remove(this);
+        }
+        else
+        {
+          moveBy(15, 0, "enemy");
+          super.update();
+        }
     }
 
     private var a:Float;

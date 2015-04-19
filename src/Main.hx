@@ -8,6 +8,7 @@ class Main extends Engine
 	override public function init()
 	{
 	 	HXP.console.enable();
+		HXP.console.toggleKey = Key.F;
 		HXP.stage.color = 0x474770;
 		HXP.scene = new scenes.GameScene();
 	}

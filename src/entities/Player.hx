@@ -50,12 +50,11 @@ class Player extends Entity
     {
       cast(this.graphic, Image).angle -= 3;
     }
-/*
+
     if (Input.check(Key.SPACE))
     {
       scene.add(new Bullet(x + width, y + height / 2));
     }
-*/
 
   }
 }
