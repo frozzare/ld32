@@ -41,16 +41,6 @@ class Player extends Entity
       moveBy(0, 5);
     }
 
-    if (Input.check(Key.S))
-    {
-      cast(this.graphic, Image).angle += 3;
-    }
-
-    if (Input.check(Key.D))
-    {
-      cast(this.graphic, Image).angle -= 3;
-    }
-
     if (Input.check(Key.SPACE))
     {
       scene.add(new Bullet(x + width, y + height / 2));
